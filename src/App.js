@@ -9,7 +9,7 @@ const App = () => {
   const ListData = () => {
    
     if (!inputList) {
-      alert('Please add Task...')
+      alert('Please add Item...')
     } else if (ind === null) {
       setItem([...item,inputList]);
 
@@ -23,6 +23,7 @@ const App = () => {
       //  delete items
   const deleteItem = (id) => {
     const updatedItem = item.filter((itemval, index) => {
+      // console.log(`${itemval},${index}`)
       return index !== id;
     });
     setItem(updatedItem);
@@ -34,6 +35,7 @@ const App = () => {
       return id === index;
     });
     const data = item.splice(id, 1);
+    // console.log("id",id)
     setInd(id);
     setInputList(data.toString());
   };
@@ -46,7 +48,7 @@ const App = () => {
             <input
               type="text"
               value={inputList}
-              placeholder="Enter item name"
+              placeholder="Enter item name.."
               onChange={(e) => setInputList(e.target.value)}
             />
             <button onClick={ListData}>+</button>
