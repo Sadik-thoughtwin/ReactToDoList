@@ -1,7 +1,7 @@
 import "./App.css";
 import React, { useState } from "react";
 
-const App = () => {
+const ToDolist = () => {
   const [inputList, setInputList] = useState("");
   const [item, setItem] = useState([]);
   const [ind, setInd] = useState(null);
@@ -79,4 +79,4 @@ const App = () => {
   );
 };
 
-export default App;
+export default ToDolist;
